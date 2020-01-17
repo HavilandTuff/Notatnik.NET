@@ -5,8 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Notatnik.NET"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Notatnik.NET" Height="450" Width="800">
+    <DockPanel FocusManager.FocusedElement="{Binding ElementName=textBox}">
+        <Menu IsMainMenu="True" DockPanel.Dock="Top">
+            <MenuItem Header="_Plik">
+                <MenuItem Header="_Nowy" InputGestureText="Ctrl+N"/>
+                <MenuItem Header="_Otwórz" InputGestureText="Ctrl+O" Click="MenuItem_Open_Click"/>
+                <MenuItem Header="Zapi_sz" InputGestureText="Ctrl+S" Click="MenuItem_Zapisz_Click"/>
+                <MenuItem Header="_Zapisz jako..." Click="MenuItem_ZapiszJako_Click"/>
+                <Separator/>
+                <MenuItem Header="_Drukuj" InputGestureText="Ctrl+P"/>
+                <Separator/>
+                <MenuItem Header="_Zakończ" InputGestureText="Alt+F4" Click="MenuItem_Zamknij_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Edycja" >
+                <MenuItem Header="_Cofnij" InputGestureText="Ctrl+Z"/>
+                <MenuItem Header="_Powtórz" InputGestureText="Ctrl+Y"/>
+                <Separator/>
+                <MenuItem Header="_Wytnij" InputGestureText="Ctrl+X"/>
+                <MenuItem Header="_Kopiuj" InputGestureText="Ctrl+C"/>
+                <MenuItem Header="_Wkl_ej" InputGestureText="Ctrl+V"/>
+                <MenuItem Header="_Usuń" InputGestureText="Del"/>
+                <Separator/>
+                <MenuItem Header="_Zaznacz wszystko" InputGestureText="Ctrl+A"/>
+                <MenuItem Header="_Godzina/Data" InputGestureText="F5"/>
+            </MenuItem>
+            <MenuItem Header="_Widok">
+                <MenuItem Header="_Zawijanie wierszy" IsCheckable="True"/>
+                <MenuItem Header="_Czcionka" />
+                <MenuItem Header="_Kolor tła"/>
+                <Separator/>
+                <MenuItem Header="Pasek _Narzędzi" IsCheckable="True"/>
+                <MenuItem Header="Pasek _stanu" IsCheckable="True"/>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray DockPanel.Dock="Top"></ToolBarTray>
+        <StatusBar  DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock x:Name="statusBarText" Text="[No file]"/>
+            </StatusBarItem>
+        </StatusBar>
+        <TextBox x:Name="textBox" 
+                AcceptsReturn="True" TextWrapping="Wrap"
+                ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 TextChanged="TextBox_TextChanged"  />
+    </DockPanel>
 </Window>
