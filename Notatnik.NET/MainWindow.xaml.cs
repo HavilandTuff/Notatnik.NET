@@ -2,6 +2,7 @@
 using System.Windows;
 using System.IO;
 using Microsoft.Win32;
+using System.Windows.Controls;
 
 namespace Notatnik.NET
 {
@@ -167,7 +168,26 @@ namespace Notatnik.NET
         {
             textBox.SelectedText = System.DateTime.Now.ToString();
         }
-// Menu View
-        
+        // Menu View
+       
+
+        private void MenuItem_ZawijanieWierszy_Click(object sender, RoutedEventArgs e)
+        {
+            bool isPositionChecked = (sender as MenuItem).IsChecked;
+            textBox.TextWrapping = isPositionChecked ? TextWrapping.Wrap : TextWrapping.NoWrap;
+
+        }
+
+        private void MenuItem_PasekNarzedzi_Click(object sender, RoutedEventArgs e)
+        {
+            bool isPositionChecked = (sender as MenuItem).IsChecked;
+            toolBar.Visibility = isPositionChecked ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+        private void MenuItem_PasekStanu_Click(object sender, RoutedEventArgs e)
+        {
+            bool isPositionChecked = (sender as MenuItem).IsChecked;
+            statusBar.Visibility = isPositionChecked ? Visibility.Visible : Visibility.Collapsed;
+        }
     }
 }

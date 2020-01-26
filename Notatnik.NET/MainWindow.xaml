@@ -32,16 +32,19 @@
                 <MenuItem Header="_Godzina/Data" InputGestureText="F5" Click="MenuItem_Data_Click"/>
             </MenuItem>
             <MenuItem Header="_Widok">
-                <MenuItem Header="_Zawijanie wierszy" IsCheckable="True"/>
+                <MenuItem Header="_Zawijanie wierszy" IsCheckable="True" IsChecked="True"
+                          Click="MenuItem_ZawijanieWierszy_Click"/>
                 <MenuItem Header="_Czcionka" />
                 <MenuItem Header="_Kolor tła"/>
                 <Separator/>
-                <MenuItem Header="Pasek _Narzędzi" IsCheckable="True"/>
-                <MenuItem Header="Pasek _stanu" IsCheckable="True"/>
+                <MenuItem Header="Pasek _Narzędzi" IsCheckable="True" IsChecked="True"
+                          Click="MenuItem_PasekNarzedzi_Click"/>
+                <MenuItem Header="Pasek _stanu" IsCheckable="True" IsChecked="True"
+                          Click="MenuItem_PasekStanu_Click"/>
             </MenuItem>
         </Menu>
-        <ToolBarTray DockPanel.Dock="Top"></ToolBarTray>
-        <StatusBar  DockPanel.Dock="Bottom">
+        <ToolBarTray x:Name="toolBar" DockPanel.Dock="Top"></ToolBarTray>
+        <StatusBar x:Name="statusBar" DockPanel.Dock="Bottom">
             <StatusBarItem>
                 <TextBlock x:Name="statusBarText" Text="[No file]"/>
             </StatusBarItem>
