@@ -32,7 +32,16 @@ namespace Notatnik.NET
             saveFileDialog.Filter = openFileDialog.Filter;
             saveFileDialog.FilterIndex = 1;
         }
-
+ // Menu File
+        private void MenuItem_Nowy_Click( object sender, RoutedEventArgs e)
+        {
+            bool isCancel;
+            AskToSaveFile( sender, out isCancel);
+            if (!isCancel)
+                {
+                textBox.Text = "";
+                }
+        }
         private void MenuItem_Open_Click(object sender, RoutedEventArgs e)
         {
             if(!string.IsNullOrWhiteSpace(filePath))
@@ -91,5 +100,74 @@ namespace Notatnik.NET
         {
             isTextChanged = true;
         }
+        private void Window_Closing( object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            bool isCancel;
+            AskToSaveFile( sender, out isCancel);
+            e.Cancel = isCancel;
+            
+        }
+        private void AskToSaveFile(object sender, out bool isCancel )
+            {
+                isCancel = false;
+                
+                if(isTextChanged)
+            {
+                MessageBoxResult result = 
+                    MessageBox.Show("Czy zapisać zmiany w edytowanym dokumencie?", 
+                                    this.Title,
+                                    MessageBoxButton.YesNoCancel,
+                                    MessageBoxImage.Question,
+                                    MessageBoxResult.Cancel);
+                switch(result)
+                {
+                    case MessageBoxResult.Yes:
+                        MenuItem_Zapisz_Click(sender, null);
+                        break;
+                    case MessageBoxResult.No:
+                        break;
+                    case MessageBoxResult.Cancel:
+                    default:
+                        isCancel = true;
+                        break;
+                }
+            }
+
+            }
+// Menu Edit
+        private void MenuItem_Cofnij_Click(object sender, RoutedEventArgs e)
+        {
+            textBox.Undo();
+        }
+        private void MenuItem_Powtorz_Click( object sender, RoutedEventArgs e)
+        {
+            textBox.Redo();
+        }
+        private void MenuItem_Kopiuj_Click( object sender, RoutedEventArgs e)
+        {
+            textBox.Copy();
+        }
+        private void MenuItem_Wytnij_Click ( object sender, RoutedEventArgs e)
+        {
+            textBox.Cut();
+        }
+        private void MenuItem_Wklej_Click ( object sender, RoutedEventArgs e)
+        {
+            textBox.Paste();
+        }
+        private void MenuItem_Usun_Click ( object sender, RoutedEventArgs e)
+        {
+            textBox.SelectedText = "";
+        }
+        private void MenuItem_Zaznacz_Click ( object sender, RoutedEventArgs e)
+        {
+            textBox.SelectAll();
+        }
+        private void MenuItem_Data_Click ( object sender, RoutedEventArgs e)
+        {
+            textBox.SelectedText = System.DateTime.Now.ToString();
+        }
+// Menu View
+        
     }
 }

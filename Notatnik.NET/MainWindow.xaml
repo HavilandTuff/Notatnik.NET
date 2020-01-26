@@ -5,30 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Notatnik.NET"
         mc:Ignorable="d"
-        Title="Notatnik.NET" Height="450" Width="800">
+        Title="Notatnik.NET" Height="450" Width="800"
+        Closing="Window_Closing">
     <DockPanel FocusManager.FocusedElement="{Binding ElementName=textBox}">
         <Menu IsMainMenu="True" DockPanel.Dock="Top">
             <MenuItem Header="_Plik">
-                <MenuItem Header="_Nowy" InputGestureText="Ctrl+N"/>
+                <MenuItem Header="_Nowy" InputGestureText="Ctrl+N" Click="MenuItem_Nowy_Click"/>
                 <MenuItem Header="_Otwórz" InputGestureText="Ctrl+O" Click="MenuItem_Open_Click"/>
                 <MenuItem Header="Zapi_sz" InputGestureText="Ctrl+S" Click="MenuItem_Zapisz_Click"/>
                 <MenuItem Header="_Zapisz jako..." Click="MenuItem_ZapiszJako_Click"/>
                 <Separator/>
-                <MenuItem Header="_Drukuj" InputGestureText="Ctrl+P"/>
+                <MenuItem Header="_Drukuj" InputGestureText="Ctrl+P" />
                 <Separator/>
                 <MenuItem Header="_Zakończ" InputGestureText="Alt+F4" Click="MenuItem_Zamknij_Click"/>
             </MenuItem>
             <MenuItem Header="_Edycja" >
-                <MenuItem Header="_Cofnij" InputGestureText="Ctrl+Z"/>
-                <MenuItem Header="_Powtórz" InputGestureText="Ctrl+Y"/>
+                <MenuItem Header="_Cofnij" InputGestureText="Ctrl+Z" Click="MenuItem_Cofnij_Click"/>
+                <MenuItem Header="_Powtórz" InputGestureText="Ctrl+Y" Click="MenuItem_Powtorz_Click"/>
                 <Separator/>
-                <MenuItem Header="_Wytnij" InputGestureText="Ctrl+X"/>
-                <MenuItem Header="_Kopiuj" InputGestureText="Ctrl+C"/>
-                <MenuItem Header="_Wkl_ej" InputGestureText="Ctrl+V"/>
-                <MenuItem Header="_Usuń" InputGestureText="Del"/>
+                <MenuItem Header="_Wytnij" InputGestureText="Ctrl+X" Click="MenuItem_Wytnij_Click"/>
+                <MenuItem Header="_Kopiuj" InputGestureText="Ctrl+C" Click="MenuItem_Kopiuj_Click"/>
+                <MenuItem Header="Wkl_ej" InputGestureText="Ctrl+V" Click="MenuItem_Wklej_Click"/>
+                <MenuItem Header="_Usuń" InputGestureText="Del" Click="MenuItem_Usun_Click"/>
                 <Separator/>
-                <MenuItem Header="_Zaznacz wszystko" InputGestureText="Ctrl+A"/>
-                <MenuItem Header="_Godzina/Data" InputGestureText="F5"/>
+                <MenuItem Header="_Zaznacz wszystko" InputGestureText="Ctrl+A" Click="MenuItem_Zaznacz_Click"/>
+                <MenuItem Header="_Godzina/Data" InputGestureText="F5" Click="MenuItem_Data_Click"/>
             </MenuItem>
             <MenuItem Header="_Widok">
                 <MenuItem Header="_Zawijanie wierszy" IsCheckable="True"/>
