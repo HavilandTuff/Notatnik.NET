@@ -19,5 +19,20 @@ namespace WPFUtils
                 B = color.B
             };
         }
+        public static bool ChooseColor( ref Color color)
+        {
+            using (System.Windows.Forms.ColorDialog colorDialog =
+                new System.Windows.Forms.ColorDialog())
+            {
+                colorDialog.Color = color.Convert();
+                colorDialog.AllowFullOpen = true;
+                bool result = colorDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK;
+                if(result)
+                {
+                   color = colorDialog.Color.Convert();
+                }
+                return result;
+            }
+        }
     }
 }

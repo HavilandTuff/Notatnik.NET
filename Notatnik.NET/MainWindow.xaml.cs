@@ -4,6 +4,7 @@ using System.IO;
 using Microsoft.Win32;
 using System.Windows.Controls;
 using WPFUtils;
+using System.Windows.Media;
 
 
 namespace Notatnik.NET
@@ -190,6 +191,19 @@ namespace Notatnik.NET
         {
             bool isPositionChecked = (sender as MenuItem).IsChecked;
             statusBar.Visibility = isPositionChecked ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+        private void MenuItem_KolorTla_Click(object sender, RoutedEventArgs e)
+        {
+            Color kolorTla = Colors.Yellow;
+            if (textBox.Background is SolidColorBrush)
+            {
+                kolorTla = (textBox.Background as SolidColorBrush).Color;                
+            }
+            if (WindowsFormsHelper.ChooseColor(ref kolorTla))
+            {
+                textBox.Background = new SolidColorBrush(kolorTla);                
+            }
         }
     }
 }
