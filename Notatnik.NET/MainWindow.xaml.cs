@@ -3,6 +3,8 @@ using System.Windows;
 using System.IO;
 using Microsoft.Win32;
 using System.Windows.Controls;
+using WPFUtils;
+
 
 namespace Notatnik.NET
 {

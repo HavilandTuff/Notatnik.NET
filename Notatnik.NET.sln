@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notatnik.NET", "Notatnik.NET\Notatnik.NET.csproj", "{26AECFBF-2F71-45CE-B149-1FD83606562A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BE2DC2CB-352A-44CA-91BE-BF835AA76423} = {BE2DC2CB-352A-44CA-91BE-BF835AA76423}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFUtils", "WPFUtils\WPFUtils.csproj", "{BE2DC2CB-352A-44CA-91BE-BF835AA76423}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{26AECFBF-2F71-45CE-B149-1FD83606562A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26AECFBF-2F71-45CE-B149-1FD83606562A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26AECFBF-2F71-45CE-B149-1FD83606562A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE2DC2CB-352A-44CA-91BE-BF835AA76423}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE2DC2CB-352A-44CA-91BE-BF835AA76423}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE2DC2CB-352A-44CA-91BE-BF835AA76423}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE2DC2CB-352A-44CA-91BE-BF835AA76423}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

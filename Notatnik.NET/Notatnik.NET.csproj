@@ -40,6 +40,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -99,6 +101,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="File.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WPFUtils\WPFUtils.csproj">
+      <Project>{be2dc2cb-352a-44ca-91be-bf835aa76423}</Project>
+      <Name>WPFUtils</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
