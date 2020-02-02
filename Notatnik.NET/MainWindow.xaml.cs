@@ -171,8 +171,7 @@ namespace Notatnik.NET
         {
             textBox.SelectedText = System.DateTime.Now.ToString();
         }
-        // Menu View
-       
+        // Menu View       
 
         private void MenuItem_ZawijanieWierszy_Click(object sender, RoutedEventArgs e)
         {
@@ -203,6 +202,15 @@ namespace Notatnik.NET
             if (WindowsFormsHelper.ChooseColor(ref kolorTla))
             {
                 textBox.Background = new SolidColorBrush(kolorTla);                
+            }
+        }
+
+        private void MenuItem_Czcionka_Click(object sender, RoutedEventArgs e)
+        {
+            Font font = Font.ExtractFrom(textBox);
+            if (WindowsFormsHelper.ChooseFont(ref font))
+            {
+                font.ApplyTo(textBox);
             }
         }
     }

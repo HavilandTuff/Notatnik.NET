@@ -34,5 +34,22 @@ namespace WPFUtils
                 return result;
             }
         }
+        public static bool ChooseFont(ref Font font)
+        {
+            using (System.Windows.Forms.FontDialog fontDialog =
+                new System.Windows.Forms.FontDialog())
+            {
+                fontDialog.ShowColor = true;
+                fontDialog.ShowEffects = true;
+                fontDialog.Font = Font.ToSystemDrawingFont(font);
+                fontDialog.Color = font.Color.Convert();
+                bool result = fontDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK;
+                if (result)
+                {
+                    font = Font.FromSystemDrawingFont(fontDialog.Font, fontDialog.Color);
+                }
+                return result;
+            }
+        }
     }
 }

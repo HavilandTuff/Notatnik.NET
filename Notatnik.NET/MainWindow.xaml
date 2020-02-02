@@ -34,7 +34,7 @@
             <MenuItem Header="_Widok">
                 <MenuItem Header="_Zawijanie wierszy" IsCheckable="True" IsChecked="True"
                           Click="MenuItem_ZawijanieWierszy_Click"/>
-                <MenuItem Header="_Czcionka" />
+                <MenuItem Header="_Czcionka" Click="MenuItem_Czcionka_Click" />
                 <MenuItem Header="_Kolor tła" Click="MenuItem_KolorTla_Click"/>
                 <Separator/>
                 <MenuItem Header="Pasek _Narzędzi" IsCheckable="True" IsChecked="True"
