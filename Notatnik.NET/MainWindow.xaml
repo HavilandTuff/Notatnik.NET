@@ -15,7 +15,7 @@
                 <MenuItem Header="Zapi_sz" InputGestureText="Ctrl+S" Click="MenuItem_Zapisz_Click"/>
                 <MenuItem Header="_Zapisz jako..." Click="MenuItem_ZapiszJako_Click"/>
                 <Separator/>
-                <MenuItem Header="_Drukuj" InputGestureText="Ctrl+P" />
+                <MenuItem Header="_Drukuj" InputGestureText="Ctrl+P" Click="MenuItem_Print_Click"/>
                 <Separator/>
                 <MenuItem Header="_Zakończ" InputGestureText="Alt+F4" Click="MenuItem_Zamknij_Click"/>
             </MenuItem>

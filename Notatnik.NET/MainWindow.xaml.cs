@@ -138,7 +138,11 @@ namespace Notatnik.NET
             }
 
             }
-// Menu Edit
+        private void MenuItem_Print_Click(object sender, RoutedEventArgs e)
+        {
+            Printing.PrintText(textBox.Text, Font.ExtractFrom(textBox));
+        }
+        // Menu Edit
         private void MenuItem_Cofnij_Click(object sender, RoutedEventArgs e)
         {
             textBox.Undo();
@@ -213,5 +217,7 @@ namespace Notatnik.NET
                 font.ApplyTo(textBox);
             }
         }
+
+
     }
 }
