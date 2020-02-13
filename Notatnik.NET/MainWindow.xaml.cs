@@ -5,6 +5,7 @@ using Microsoft.Win32;
 using System.Windows.Controls;
 using WPFUtils;
 using System.Windows.Media;
+using System.Windows.Input;
 
 
 namespace Notatnik.NET
@@ -218,6 +219,33 @@ namespace Notatnik.NET
             }
         }
 
+        //Shortcuts bindings
+        private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            switch(e.Key)
+            {
+                case Key.F5: MenuItem_Data_Click(sender, null);
+                    break;
+            }
+            if ((e.KeyboardDevice.Modifiers & ModifierKeys.Control) == ModifierKeys.Control)
+            {
+                switch (e.Key)
+                {
+                    case Key.N:
+                        MenuItem_Nowy_Click(sender, null);
+                        break;
+                    case Key.O:
+                        MenuItem_Open_Click(sender, null);
+                        break;
+                    case Key.S:
+                        MenuItem_Zapisz_Click(sender, null);
+                        break;
+                    case Key.P:
+                        MenuItem_Print_Click(sender, null);
+                        break;
+                }
+            }
+        }
 
     }
 }

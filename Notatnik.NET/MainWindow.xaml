@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Notatnik.NET"
         mc:Ignorable="d"
         Title="Notatnik.NET" Height="450" Width="800"
-        Closing="Window_Closing">
+        Closing="Window_Closing"
+        PreviewKeyDown="Window_KeyDown">
     <DockPanel FocusManager.FocusedElement="{Binding ElementName=textBox}">
         <Menu IsMainMenu="True" DockPanel.Dock="Top">
             <MenuItem Header="_Plik">
