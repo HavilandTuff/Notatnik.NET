@@ -8,35 +8,69 @@
         Title="Notatnik.NET" Height="450" Width="800"
         Closing="Window_Closing"
         PreviewKeyDown="Window_KeyDown">
+    <Window.Resources>
+        <Image x:Key="IconNew" x:Shared="false" Source="img/new_file.png" Width="16" Height="16"/>
+        <Image x:Key="IconOpen" x:Shared="false" Source="img/open.png" Width="16" Height="16"/>
+        <Image x:Key="IconSave" x:Shared="false" Source="img/save.png" Width="16" Height="16"/>
+        <Image x:Key="IconSaveAs" x:Shared="false" Source="img/save_as.png" Width="16" Height="16"/>
+        <Image x:Key="IconPrint" x:Shared="false" Source="img/print.png" Width="16" Height="16"/>
+        <Image x:Key="IconUndo" x:Shared="false" Source="img/undo.png" Width="16" Height="16"/>
+        <Image x:Key="IconRepeat" x:Shared="false" Source="img/redo.png" Width="16" Height="16"/>
+        <Image x:Key="IconCut" x:Shared="false" Source="img/cut.png" Width="16" Height="16"/>
+        <Image x:Key="IconCopy" x:Shared="false" Source="img/copy.png" Width="16" Height="16"/>
+        <Image x:Key="IconPaste" x:Shared="false" Source="img/paste.png" Width="16" Height="16"/>
+        <Image x:Key="IconDelete" x:Shared="false" Source="img/trash_full.png" Width="16" Height="16"/>
+        <Image x:Key="IconDate" x:Shared="false" Source="img/clock.png" Width="16" Height="16"/>
+        <Image x:Key="IconFont" x:Shared="false" Source="img/font_style.png" Width="16" Height="16"/>
+        <Image x:Key="IconBackground" x:Shared="false" Source="img/backcolor.png" Width="16" Height="16"/>
+        <Image x:Key="IconClose" x:Shared="false" Source="img/delete.png" Width="16" Height="16"/>
+        <Image x:Key="IconSelectAll" x:Shared="false" Source="img/select_all.jpg" Width="16" Height="16"/>
+    </Window.Resources>
     <DockPanel FocusManager.FocusedElement="{Binding ElementName=textBox}">
         <Menu IsMainMenu="True" DockPanel.Dock="Top">
             <MenuItem Header="_Plik">
-                <MenuItem Header="_Nowy" InputGestureText="Ctrl+N" Click="MenuItem_Nowy_Click"/>
-                <MenuItem Header="_Otwórz" InputGestureText="Ctrl+O" Click="MenuItem_Open_Click"/>
-                <MenuItem Header="Zapi_sz" InputGestureText="Ctrl+S" Click="MenuItem_Zapisz_Click"/>
-                <MenuItem Header="_Zapisz jako..." Click="MenuItem_ZapiszJako_Click"/>
+                <MenuItem Header="_Nowy" InputGestureText="Ctrl+N" Click="MenuItem_Nowy_Click" 
+                          Icon="{StaticResource IconNew}"/>
+                <MenuItem Header="_Otwórz" InputGestureText="Ctrl+O" Click="MenuItem_Open_Click"
+                          Icon="{StaticResource IconOpen}"/>
+                <MenuItem Header="Zapi_sz" InputGestureText="Ctrl+S" Click="MenuItem_Zapisz_Click"
+                          Icon="{StaticResource IconSave}"/>
+                <MenuItem Header="_Zapisz jako..." Click="MenuItem_ZapiszJako_Click"
+                          Icon="{StaticResource IconSaveAs}"/>
                 <Separator/>
-                <MenuItem Header="_Drukuj" InputGestureText="Ctrl+P" Click="MenuItem_Print_Click"/>
+                <MenuItem Header="_Drukuj" InputGestureText="Ctrl+P" Click="MenuItem_Print_Click"
+                          Icon="{StaticResource IconPrint}"/>
                 <Separator/>
-                <MenuItem Header="_Zakończ" InputGestureText="Alt+F4" Click="MenuItem_Zamknij_Click"/>
+                <MenuItem Header="_Zakończ" InputGestureText="Alt+F4" Click="MenuItem_Zamknij_Click"
+                          Icon="{StaticResource IconClose}"/>
             </MenuItem>
             <MenuItem Header="_Edycja" >
-                <MenuItem Header="_Cofnij" InputGestureText="Ctrl+Z" Click="MenuItem_Cofnij_Click"/>
-                <MenuItem Header="_Powtórz" InputGestureText="Ctrl+Y" Click="MenuItem_Powtorz_Click"/>
+                <MenuItem Header="_Cofnij" InputGestureText="Ctrl+Z" Click="MenuItem_Cofnij_Click"
+                          Icon="{StaticResource IconUndo}"/>
+                <MenuItem Header="_Powtórz" InputGestureText="Ctrl+Y" Click="MenuItem_Powtorz_Click"
+                          Icon="{StaticResource IconRepeat}"/>
                 <Separator/>
-                <MenuItem Header="_Wytnij" InputGestureText="Ctrl+X" Click="MenuItem_Wytnij_Click"/>
-                <MenuItem Header="_Kopiuj" InputGestureText="Ctrl+C" Click="MenuItem_Kopiuj_Click"/>
-                <MenuItem Header="Wkl_ej" InputGestureText="Ctrl+V" Click="MenuItem_Wklej_Click"/>
-                <MenuItem Header="_Usuń" InputGestureText="Del" Click="MenuItem_Usun_Click"/>
+                <MenuItem Header="_Wytnij" InputGestureText="Ctrl+X" Click="MenuItem_Wytnij_Click"
+                          Icon="{StaticResource IconCut}"/>
+                <MenuItem Header="_Kopiuj" InputGestureText="Ctrl+C" Click="MenuItem_Kopiuj_Click"
+                          Icon="{StaticResource IconCopy}"/>
+                <MenuItem Header="Wkl_ej" InputGestureText="Ctrl+V" Click="MenuItem_Wklej_Click"
+                          Icon="{StaticResource IconPaste}"/>
+                <MenuItem Header="_Usuń" InputGestureText="Del" Click="MenuItem_Usun_Click"
+                          Icon="{StaticResource IconDelete}"/>
                 <Separator/>
-                <MenuItem Header="_Zaznacz wszystko" InputGestureText="Ctrl+A" Click="MenuItem_Zaznacz_Click"/>
-                <MenuItem Header="_Godzina/Data" InputGestureText="F5" Click="MenuItem_Data_Click"/>
+                <MenuItem Header="_Zaznacz wszystko" InputGestureText="Ctrl+A" Click="MenuItem_Zaznacz_Click"
+                          Icon="{StaticResource IconSelectAll}"/>
+                <MenuItem Header="_Godzina/Data" InputGestureText="F5" Click="MenuItem_Data_Click"
+                          Icon="{StaticResource IconDate}"/>
             </MenuItem>
             <MenuItem Header="_Widok">
                 <MenuItem Header="_Zawijanie wierszy" IsCheckable="True" IsChecked="True"
                           Click="MenuItem_ZawijanieWierszy_Click"/>
-                <MenuItem Header="_Czcionka" Click="MenuItem_Czcionka_Click" />
-                <MenuItem Header="_Kolor tła" Click="MenuItem_KolorTla_Click"/>
+                <MenuItem Header="_Czcionka" Click="MenuItem_Czcionka_Click" 
+                          Icon="{StaticResource IconFont}"/>
+                <MenuItem Header="_Kolor tła" Click="MenuItem_KolorTla_Click"
+                          Icon="{StaticResource IconBackground}"/>
                 <Separator/>
                 <MenuItem Header="Pasek _Narzędzi" IsCheckable="True" IsChecked="True"
                           Click="MenuItem_PasekNarzedzi_Click"/>
