@@ -78,7 +78,40 @@
                           Click="MenuItem_PasekStanu_Click"/>
             </MenuItem>
         </Menu>
-        <ToolBarTray x:Name="toolBar" DockPanel.Dock="Top"></ToolBarTray>
+        <ToolBarTray x:Name="toolBar" DockPanel.Dock="Top">
+            <ToolBar>
+                <Button ToolTip="Nowy" Content="{StaticResource IconNew}"
+                        ToolBar.OverflowMode="AsNeeded" Click="MenuItem_Nowy_Click"/>
+                <Button ToolTip="Otwórz" Content="{StaticResource IconOpen}"
+                        ToolBar.OverflowMode="AsNeeded" Click="MenuItem_Open_Click"/>
+                <Button ToolTip="Zapisz" Content="{StaticResource IconSave}"
+                        ToolBar.OverflowMode="Never" Click="MenuItem_Zapisz_Click"/>
+                <Separator/>
+                <Button ToolTip="Drukuj" Content="{StaticResource IconPrint}"
+                        ToolBar.OverflowMode="AsNeeded" Click="MenuItem_Print_Click"/>
+            </ToolBar>
+            <ToolBar>
+                <Button ToolTip="Cofnij" Content="{StaticResource IconUndo}"
+                        ToolBar.OverflowMode="Never" Click="MenuItem_Cofnij_Click"/>
+                <Button ToolTip="Powtórz" Content="{StaticResource IconRepeat}"
+                        ToolBar.OverflowMode="Never" Click="MenuItem_Powtorz_Click"/>
+                <Separator/>
+                <Button ToolTip="Wytnij" Content="{StaticResource IconCut}"
+                        ToolBar.OverflowMode="AsNeeded" Click="MenuItem_Wytnij_Click"/>
+                <Button ToolTip="Kopiuj" Content="{StaticResource IconCopy}"
+                        ToolBar.OverflowMode="AsNeeded" Click="MenuItem_Kopiuj_Click"/>
+                <Button ToolTip="Wklej" Content="{StaticResource IconPaste}"
+                        ToolBar.OverflowMode="AsNeeded" Click="MenuItem_Wklej_Click"/>
+                <Button ToolTip="Usuń" Content="{StaticResource IconDelete}"
+                        ToolBar.OverflowMode="AsNeeded" Click="MenuItem_Usun_Click"/>
+            </ToolBar>
+            <ToolBar>
+                <Button ToolTip="Czcionka" Content="{StaticResource IconFont}"
+                        ToolBar.OverflowMode="Never" Click="MenuItem_Czcionka_Click"/>
+                <Button ToolTip="Kolor Tła" Content="{StaticResource IconBackground}"
+                        ToolBar.OverflowMode="AsNeeded" Click="MenuItem_KolorTla_Click"/>
+            </ToolBar>
+        </ToolBarTray>
         <StatusBar x:Name="statusBar" DockPanel.Dock="Bottom">
             <StatusBarItem>
                 <TextBlock x:Name="statusBarText" Text="[No file]"/>
