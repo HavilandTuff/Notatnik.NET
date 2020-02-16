@@ -78,6 +78,7 @@ namespace Notatnik.NET
                 File.WriteAllText(filePath, textBox.Text);
                 statusBarText.Text = Path.GetFileName(filePath);
                 isTextChanged = false;
+                statusBar.Background = new SolidColorBrush(Colors.Green);
             }
            
         }
@@ -88,6 +89,7 @@ namespace Notatnik.NET
             {
                 File.WriteAllText(filePath, textBox.Text);
                 isTextChanged = false;
+                statusBar.Background = new SolidColorBrush(Colors.Green);
             }
             else
             {
@@ -103,7 +105,13 @@ namespace Notatnik.NET
 
         private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
+            if(!isTextChanged)
+            {
+                statusBar.Background = new SolidColorBrush(Colors.Orange);
+                statusBarText.Text += " Not saved!";
+            }
             isTextChanged = true;
+            
         }
         private void Window_Closing( object sender, System.ComponentModel.CancelEventArgs e)
         {

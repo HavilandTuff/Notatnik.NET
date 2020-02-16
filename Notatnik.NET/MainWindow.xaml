@@ -112,7 +112,7 @@
                         ToolBar.OverflowMode="AsNeeded" Click="MenuItem_KolorTla_Click"/>
             </ToolBar>
         </ToolBarTray>
-        <StatusBar x:Name="statusBar" DockPanel.Dock="Bottom">
+        <StatusBar x:Name="statusBar" DockPanel.Dock="Bottom" Background="Green">
             <StatusBarItem>
                 <TextBlock x:Name="statusBarText" Text="[No file]"/>
             </StatusBarItem>
