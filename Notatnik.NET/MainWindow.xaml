@@ -44,10 +44,10 @@
                 <MenuItem Header="_Zakończ" InputGestureText="Alt+F4" Click="MenuItem_Zamknij_Click"
                           Icon="{StaticResource IconClose}"/>
             </MenuItem>
-            <MenuItem Header="_Edycja" >
-                <MenuItem Header="_Cofnij" InputGestureText="Ctrl+Z" Click="MenuItem_Cofnij_Click"
-                          Icon="{StaticResource IconUndo}"/>
-                <MenuItem Header="_Powtórz" InputGestureText="Ctrl+Y" Click="MenuItem_Powtorz_Click"
+            <MenuItem Header="_Edycja" SubmenuOpened="MenuItem_SubmenuOpened">
+                <MenuItem x:Name="undo" Header="_Cofnij" InputGestureText="Ctrl+Z" Click="MenuItem_Cofnij_Click"
+                          Icon="{StaticResource IconUndo}" IsEnabled="False"/>
+                <MenuItem x:Name="redo" Header="_Powtórz" InputGestureText="Ctrl+Y" Click="MenuItem_Powtorz_Click"
                           Icon="{StaticResource IconRepeat}"/>
                 <Separator/>
                 <MenuItem Header="_Wytnij" InputGestureText="Ctrl+X" Click="MenuItem_Wytnij_Click"
@@ -91,10 +91,10 @@
                         ToolBar.OverflowMode="AsNeeded" Click="MenuItem_Print_Click"/>
             </ToolBar>
             <ToolBar>
-                <Button ToolTip="Cofnij" Content="{StaticResource IconUndo}"
-                        ToolBar.OverflowMode="Never" Click="MenuItem_Cofnij_Click"/>
-                <Button ToolTip="Powtórz" Content="{StaticResource IconRepeat}"
-                        ToolBar.OverflowMode="Never" Click="MenuItem_Powtorz_Click"/>
+                <Button x:Name="undoToolBar" ToolTip="Cofnij" Content="{StaticResource IconUndo}"
+                        ToolBar.OverflowMode="Never" Click="MenuItem_Cofnij_Click" IsEnabled="False"/>
+                <Button x:Name="redoToolBar"   ToolTip="Powtórz" Content="{StaticResource IconRepeat}"
+                        ToolBar.OverflowMode="Never" Click="MenuItem_Powtorz_Click" IsEnabled="False"/>
                 <Separator/>
                 <Button ToolTip="Wytnij" Content="{StaticResource IconCut}"
                         ToolBar.OverflowMode="AsNeeded" Click="MenuItem_Wytnij_Click"/>

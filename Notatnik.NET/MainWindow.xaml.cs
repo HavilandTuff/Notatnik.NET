@@ -111,7 +111,8 @@ namespace Notatnik.NET
                 statusBarText.Text += " Not saved!";
             }
             isTextChanged = true;
-            
+            undoToolBar.IsEnabled = textBox.CanUndo;
+            redoToolBar.IsEnabled = textBox.CanRedo;
         }
         private void Window_Closing( object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -255,5 +256,10 @@ namespace Notatnik.NET
             }
         }
 
+        private void MenuItem_SubmenuOpened(object sender, RoutedEventArgs e)
+        {
+            undo.IsEnabled = textBox.CanUndo;
+            redo.IsEnabled = textBox.CanRedo;
+        }
     }
 }
