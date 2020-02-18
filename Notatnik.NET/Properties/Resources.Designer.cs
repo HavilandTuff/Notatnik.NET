@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Notatnik.NET.Properties
-{
-
-
+namespace Notatnik.NET.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -19,52 +19,413 @@ namespace Notatnik.NET.Properties
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    public class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        public static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Notatnik.NET.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        public static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Background.
+        /// </summary>
+        public static string BackgroundColor {
+            get {
+                return ResourceManager.GetString("BackgroundColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose text file.
+        /// </summary>
+        public static string ChooseTextFile {
+            get {
+                return ResourceManager.GetString("ChooseTextFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E_xit.
+        /// </summary>
+        public static string Close {
+            get {
+                return ResourceManager.GetString("Close", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Copy.
+        /// </summary>
+        public static string Copy {
+            get {
+                return ResourceManager.GetString("Copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Cut.
+        /// </summary>
+        public static string Cut {
+            get {
+                return ResourceManager.GetString("Cut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date/Time.
+        /// </summary>
+        public static string DateTime {
+            get {
+                return ResourceManager.GetString("DateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text files (*.txt)|*.txt|XML files(*.xml)|*.xml|Sourcecode files (*.cs)|*.cs|All files (*.*)|*.*..
+        /// </summary>
+        public static string DialogsFilter {
+            get {
+                return ResourceManager.GetString("DialogsFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Edit.
+        /// </summary>
+        public static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _File.
+        /// </summary>
+        public static string File {
+            get {
+                return ResourceManager.GetString("File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Font.
+        /// </summary>
+        public static string Font {
+            get {
+                return ResourceManager.GetString("Font", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New.
+        /// </summary>
+        public static string New {
+            get {
+                return ResourceManager.GetString("New", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to not saved!.
+        /// </summary>
+        public static string NotSaved {
+            get {
+                return ResourceManager.GetString("NotSaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Open.
+        /// </summary>
+        public static string Open {
+            get {
+                return ResourceManager.GetString("Open", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Paste.
+        /// </summary>
+        public static string Paste {
+            get {
+                return ResourceManager.GetString("Paste", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Print.
+        /// </summary>
+        public static string Print {
+            get {
+                return ResourceManager.GetString("Print", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recent Files.
+        /// </summary>
+        public static string RecentFiles {
+            get {
+                return ResourceManager.GetString("RecentFiles", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Redo.
+        /// </summary>
+        public static string Redo {
+            get {
+                return ResourceManager.GetString("Redo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save _As ....
+        /// </summary>
+        public static string SaveAs {
+            get {
+                return ResourceManager.GetString("SaveAs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do you want save changes in your file?.
+        /// </summary>
+        public static string SaveChanges {
+            get {
+                return ResourceManager.GetString("SaveChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save text file.
+        /// </summary>
+        public static string SaveTextFile {
+            get {
+                return ResourceManager.GetString("SaveTextFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select _All.
+        /// </summary>
+        public static string SelectAll {
+            get {
+                return ResourceManager.GetString("SelectAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Statusbar.
+        /// </summary>
+        public static string StatusBar {
+            get {
+                return ResourceManager.GetString("StatusBar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Toolbar.
+        /// </summary>
+        public static string Toolbar {
+            get {
+                return ResourceManager.GetString("Toolbar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Background Color.
+        /// </summary>
+        public static string ToolTipBackground {
+            get {
+                return ResourceManager.GetString("ToolTipBackground", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy.
+        /// </summary>
+        public static string ToolTipCopy {
+            get {
+                return ResourceManager.GetString("ToolTipCopy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cut.
+        /// </summary>
+        public static string ToolTipCut {
+            get {
+                return ResourceManager.GetString("ToolTipCut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        public static string ToolTipDelete {
+            get {
+                return ResourceManager.GetString("ToolTipDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Font.
+        /// </summary>
+        public static string ToolTipFont {
+            get {
+                return ResourceManager.GetString("ToolTipFont", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New File.
+        /// </summary>
+        public static string ToolTipNew {
+            get {
+                return ResourceManager.GetString("ToolTipNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Open.
+        /// </summary>
+        public static string ToolTipOpen {
+            get {
+                return ResourceManager.GetString("ToolTipOpen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Paste.
+        /// </summary>
+        public static string ToolTipPaste {
+            get {
+                return ResourceManager.GetString("ToolTipPaste", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Print.
+        /// </summary>
+        public static string ToolTipPrint {
+            get {
+                return ResourceManager.GetString("ToolTipPrint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Redo.
+        /// </summary>
+        public static string ToolTipRedo {
+            get {
+                return ResourceManager.GetString("ToolTipRedo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string ToolTipSave {
+            get {
+                return ResourceManager.GetString("ToolTipSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Undo.
+        /// </summary>
+        public static string ToolTipUndo {
+            get {
+                return ResourceManager.GetString("ToolTipUndo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _Undo.
+        /// </summary>
+        public static string Undo {
+            get {
+                return ResourceManager.GetString("Undo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to _View.
+        /// </summary>
+        public static string View {
+            get {
+                return ResourceManager.GetString("View", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notepad.NET.
+        /// </summary>
+        public static string WindowTitle {
+            get {
+                return ResourceManager.GetString("WindowTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Word Wrap.
+        /// </summary>
+        public static string WordWrap {
+            get {
+                return ResourceManager.GetString("WordWrap", resourceCulture);
             }
         }
     }
