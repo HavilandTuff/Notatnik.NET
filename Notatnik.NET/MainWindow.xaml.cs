@@ -22,17 +22,18 @@ namespace Notatnik.NET
 
         public MainWindow()
         {
+            System.Threading.Thread.CurrentThread.CurrentUICulture =
+new System.Globalization.CultureInfo("pl");
             InitializeComponent();
 
             openFileDialog = new OpenFileDialog();
-            openFileDialog.Title = "Wybierz plik tekstowy.";
+            openFileDialog.Title = Properties.Resources.ChooseTextFile;
             openFileDialog.DefaultExt = "txt";
-            openFileDialog.Filter = "Pliki tekstowe (*.txt) | *.txt | Pliki XML (*.xml) | *.xml | Pliki źródłowe (*.cs) | *.cs | " +
-                "Wszystkie pliki (*.*) | *.*";
+            openFileDialog.Filter = Properties.Resources.DialogsFilter;
             openFileDialog.FilterIndex = 1;
 
             saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Title = "Zapisz plik tekstowy";
+            saveFileDialog.Title = Properties.Resources.SaveTextFile;
             saveFileDialog.DefaultExt = "txt";
             saveFileDialog.Filter = openFileDialog.Filter;
             saveFileDialog.FilterIndex = 1;
@@ -108,7 +109,7 @@ namespace Notatnik.NET
             if(!isTextChanged)
             {
                 statusBar.Background = new SolidColorBrush(Colors.Orange);
-                statusBarText.Text += " Not saved!";
+                statusBarText.Text += Properties.Resources.NotSaved;
             }
             isTextChanged = true;
             undoToolBar.IsEnabled = textBox.CanUndo;
@@ -128,7 +129,7 @@ namespace Notatnik.NET
                 if(isTextChanged)
             {
                 MessageBoxResult result = 
-                    MessageBox.Show("Czy zapisać zmiany w edytowanym dokumencie?", 
+                    MessageBox.Show(Properties.Resources.SaveChanges, 
                                     this.Title,
                                     MessageBoxButton.YesNoCancel,
                                     MessageBoxImage.Question,

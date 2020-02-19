@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BackgroundColor" xml:space="preserve">
+    <value>Kolor tła</value>
+  </data>
+  <data name="ChooseTextFile" xml:space="preserve">
+    <value>Wybierz plik tekstowy</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Za_kończ</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>_Kopiuj</value>
+  </data>
+  <data name="Cut" xml:space="preserve">
+    <value>_Wytnij</value>
+  </data>
+  <data name="DateTime" xml:space="preserve">
+    <value>_Godzina/Data</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>_Usuń</value>
+  </data>
+  <data name="DialogsFilter" xml:space="preserve">
+    <value>Pliki tekstowe (*.txt)|*.txt|XML files(*.xml)|*.xml|Pliki źródłowe (*.cs)|*.cs|Wszystkie pliki (*.*)|*.*.</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>_Edycja</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>_Plik</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Czcionka</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>_Nowy</value>
+  </data>
+  <data name="NotSaved" xml:space="preserve">
+    <value> niezapisany!</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>_Otwórz</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>_Wklej</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>_Drukuj</value>
+  </data>
+  <data name="RecentFiles" xml:space="preserve">
+    <value>Ostanie pliki</value>
+  </data>
+  <data name="Redo" xml:space="preserve">
+    <value>_Powtórz</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Zapi_sz</value>
+  </data>
+  <data name="SaveAs" xml:space="preserve">
+    <value>_Zapisz jako...</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Czy zapisać zmiany w edytowanym dokumencie?</value>
+  </data>
+  <data name="SaveTextFile" xml:space="preserve">
+    <value>Zapisz plik tekstowy</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Zaznacz w_szystko</value>
+  </data>
+  <data name="StatusBar" xml:space="preserve">
+    <value>Pasek _stanu</value>
+  </data>
+  <data name="Toolbar" xml:space="preserve">
+    <value>Pasek _narzędzi</value>
+  </data>
+  <data name="ToolTipBackground" xml:space="preserve">
+    <value>Kolor tła</value>
+  </data>
+  <data name="ToolTipCopy" xml:space="preserve">
+    <value>Kopiuj</value>
+  </data>
+  <data name="ToolTipCut" xml:space="preserve">
+    <value>Wytnij</value>
+  </data>
+  <data name="ToolTipDelete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="ToolTipFont" xml:space="preserve">
+    <value>Czcionka</value>
+  </data>
+  <data name="ToolTipNew" xml:space="preserve">
+    <value>Nowy plik</value>
+  </data>
+  <data name="ToolTipOpen" xml:space="preserve">
+    <value>Otwórz</value>
+  </data>
+  <data name="ToolTipPaste" xml:space="preserve">
+    <value>Wklej</value>
+  </data>
+  <data name="ToolTipPrint" xml:space="preserve">
+    <value>Drukuj</value>
+  </data>
+  <data name="ToolTipRedo" xml:space="preserve">
+    <value>Powtórz</value>
+  </data>
+  <data name="ToolTipSave" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+  <data name="ToolTipUndo" xml:space="preserve">
+    <value>Cofnij</value>
+  </data>
+  <data name="Undo" xml:space="preserve">
+    <value>_Cofnij</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>_Widok</value>
+  </data>
+  <data name="WindowTitle" xml:space="preserve">
+    <value>Notatnik.NET</value>
+  </data>
+  <data name="WordWrap" xml:space="preserve">
+    <value>Zawijanie wierszy</value>
+  </data>
+</root>
