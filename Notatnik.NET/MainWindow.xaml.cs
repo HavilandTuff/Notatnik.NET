@@ -22,8 +22,6 @@ namespace Notatnik.NET
 
         public MainWindow()
         {
-            System.Threading.Thread.CurrentThread.CurrentUICulture =
-new System.Globalization.CultureInfo("pl");
             InitializeComponent();
 
             openFileDialog = new OpenFileDialog();
