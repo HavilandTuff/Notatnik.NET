@@ -64,6 +64,8 @@
                           Icon="{StaticResource IconSelectAll}"/>
                 <MenuItem Header="{x:Static p:Resources.DateTime}" InputGestureText="F5" Click="MenuItem_Data_Click"
                           Icon="{StaticResource IconDate}"/>
+                <Separator/>
+                <MenuItem Header="Znajdź" InputGestureText="Ctrl+F" Click="MenuItem_Find_Click"/>
             </MenuItem>
             <MenuItem Header="{x:Static p:Resources.View}">
                 <MenuItem Header="{x:Static p:Resources.WordWrap}" IsCheckable="True" IsChecked="True"

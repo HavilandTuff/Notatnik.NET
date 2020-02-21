@@ -102,17 +102,6 @@ namespace Notatnik.NET
             Close();
         }
 
-        private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
-        {
-            if(!isTextChanged)
-            {
-                statusBar.Background = new SolidColorBrush(Colors.Orange);
-                statusBarText.Text += Properties.Resources.NotSaved;
-            }
-            isTextChanged = true;
-            undoToolBar.IsEnabled = textBox.CanUndo;
-            redoToolBar.IsEnabled = textBox.CanRedo;
-        }
         private void Window_Closing( object sender, System.ComponentModel.CancelEventArgs e)
         {
             bool isCancel;
@@ -184,6 +173,10 @@ namespace Notatnik.NET
         {
             textBox.SelectedText = System.DateTime.Now.ToString();
         }
+        private void MenuItem_Find_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
         // Menu View       
 
         private void MenuItem_ZawijanieWierszy_Click(object sender, RoutedEventArgs e)
@@ -254,11 +247,23 @@ namespace Notatnik.NET
                 }
             }
         }
-
+        //Helper methods
         private void MenuItem_SubmenuOpened(object sender, RoutedEventArgs e)
         {
             undo.IsEnabled = textBox.CanUndo;
             redo.IsEnabled = textBox.CanRedo;
         }
+        private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+            if (!isTextChanged)
+            {
+                statusBar.Background = new SolidColorBrush(Colors.Orange);
+                statusBarText.Text += Properties.Resources.NotSaved;
+            }
+            isTextChanged = true;
+            undoToolBar.IsEnabled = textBox.CanUndo;
+            redoToolBar.IsEnabled = textBox.CanRedo;
+        }
+
     }
 }
