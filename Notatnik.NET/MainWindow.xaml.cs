@@ -175,7 +175,8 @@ namespace Notatnik.NET
         }
         private void MenuItem_Find_Click(object sender, RoutedEventArgs e)
         {
-            
+            FindWindow findWindow = new FindWindow(textBox.Text);
+            findWindow.Show();
         }
         // Menu View       
 
