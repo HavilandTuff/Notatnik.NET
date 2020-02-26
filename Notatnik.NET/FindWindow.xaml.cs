@@ -27,18 +27,27 @@ namespace Notatnik.NET
 
         private void FindButton_Click(object sender, RoutedEventArgs e)
         {
+            SearchString(textBuffer, SearchField.Text);       
+            
+        }
 
-
-            if (!string.IsNullOrEmpty(SearchField.Text))
+        private void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+        //Helper functions
+        private void SearchString(string text, string key)
+        {
+            if (!string.IsNullOrEmpty(key))
             {
-                index = textBuffer.IndexOf(SearchField.Text, index);
-                
+                index = text.IndexOf(key, index);
+
                 if (index > -1)
                 {
                     Window parentWindow = Application.Current.MainWindow;
                     ((MainWindow)parentWindow).textBox.CaretIndex = index;
                     ((MainWindow)parentWindow).textBox.Focus();
-                    ((MainWindow)parentWindow).textBox.Select(index, SearchField.Text.Length);
+                    ((MainWindow)parentWindow).textBox.Select(index, key.Length);
                     index++;
                     stringFound = true;
                 }
@@ -57,11 +66,6 @@ namespace Notatnik.NET
                     index = 0;
                 }
             }
-        }
-
-        private void Cancel_Click(object sender, RoutedEventArgs e)
-        {
-            Close();
         }
     }
 }
